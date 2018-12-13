@@ -1,4 +1,9 @@
-Links:
+
+Esteban Solano Granados
+stvansolano@outlook.com
+
+### Slides
+https://drive.google.com/file/d/1QbafCkRUZaFwq-WEXjPvktsgTvu5xzo9/view?usp=sharing
 
 ## Session 1
 https://littleStyleShop.com/
@@ -15,6 +20,16 @@ https://caniuse.com/#search=camera
 
 https://www.w3.org/TR/html52/
 
-### Slides 
-https://drive.google.com/file/d/1QbafCkRUZaFwq-WEXjPvktsgTvu5xzo9/view?usp=sharing
+## Session 3
+Example: http://www.csszengarden.com/
 
+https://developer.mozilla.org/en-US/docs/Web/CSS
+
+https://fonts.google.com/
+
+Custom fonts:
+https://css-tricks.com/snippets/css/using-font-face/
+
+https://websitesetup.org/css3-cheat-sheet/
+
+https://codebeautify.org/css-beautify-minify
