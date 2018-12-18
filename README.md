@@ -33,3 +33,10 @@ https://css-tricks.com/snippets/css/using-font-face/
 https://websitesetup.org/css3-cheat-sheet/
 
 https://codebeautify.org/css-beautify-minify
+
+## Session 4
+
+http://getbootstrap.com/
+https://learn.jquery.com/
+
+## Session 5 (JavaScript)
