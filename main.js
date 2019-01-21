@@ -1,65 +1,67 @@
-console.log(`Hidden message`);
-console.log(100);
-console.log("standard message");
+console.log("testing...");
 console.log(new Date());
 
-document.writeln("Hello from JavaScript");
-document.writeln(new Date());
+var sum = 1 + 1;
+console.log(sum);
 
-document.writeln("<h2>This is H2 </h2>");
-document.writeln("<h3 style='background-color:red;'>This is H3</h3>");
+document.write("Hello from JavaScript");
 
-function paint() {
-    document.getElementById("dynamicSection");
+// Body for the function
+function sayHello() {
 
-    var section = document.getElementById("dynamicSection");
+    alert("Hello!");
 
+    var name = "John";
+    
+    name = {"name" : "John"};
+
+    // Store in the variable
+    name = prompt("What's your name?");
+
+    // Define a variable, then set to getElementById
+    var dynamicSection = document.getElementById("dynamicSection");
+    
+    var breakLine = document.createElement("br");
+
+    // Append it to the DOM
+    dynamicSection.appendChild(breakLine);
+
+    // Append it to the DOM
+    dynamicSection.append("Hello again! "  + name);
+}
+
+function paint () {
+    var dynamicSection = document.getElementById("dynamicSection");
+
+    // Instead of "background-color: red" assign it through JavaScript
     var color = document.getElementById("colorValue");
 
-    section.style.backgroundColor = color.value;
-
-    // alert(color.value);
-    console.log(color.value);
-
-    // Create text, then set, then append
-    var text = document.createElement("h4"); // p, h1, h2, h3, ...
-
-    text.innerHTML = "You selected:" + color.value;
-
-    section.appendChild(text);
-    
-    // Instead, of append, reset text
-    // section.innerText = "You selected:" + color.value;
+    dynamicSection.style.backgroundColor = color.value;
 }
 
-function sayHello() {
-    alert("hello, world!");
-    alert("how are you?");
+var isToggled = false;
 
-    // 1) Ask the name
-    var input = prompt("What's your name?");
-    
-    // 2) Say: "Hello, <NAME>" (Concatenate means joining strings)
-    alert("Hello, " + input);
-
-    var section = document.getElementById("dynamicSection");
-
-    // 3) Show it (append)
-    section.append(input);
-}
-
-function toggleHighlight(){
+function toggleHighlight() {
     var textSection = document.getElementById("textSection");
 
-    textSection.className = "highlight";
+    //textSection.className = "highlight";
+
+    //textSection.classList.toggle("highlight");
+    //textSection.classList.remove("normal");
+    isToggled = !isToggled;
+
+    if (isToggled) {
+        textSection.classList.add("highlight");
+    }
+    else {
+        textSection.classList.remove("highlight");
+    }
 }
 
+// No longer used
+function untoggle() {
+    var textSection = document.getElementById("textSection");
 
-
-
-
-
-
-
-
-
+    //textSection.classList.add("normal");    
+    textSection.classList.remove("highlight");
+}
