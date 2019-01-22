@@ -9,6 +9,14 @@ document.write("<pre>");
 document.write(JSON.stringify(students, undefined, 2));
 document.write("</pre>");
 
+var names = [];
+
+students.forEach(student => {
+    names.push(student.name);
+});
+
+document.writeln(names);
+
 function loadData(){
 
     var i = 0;
