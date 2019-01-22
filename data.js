@@ -1,4 +1,8 @@
-var students = ["John", "Larry", "Joseph"];
+var students = [
+    {name: "John", score: 90 }, 
+    {name: "Larry", score: 60 }, 
+    {name: "Joseph", score: 50 }, 
+];
 
 //document.writeln(students.length);
 document.write(students);
