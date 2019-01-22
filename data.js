@@ -5,19 +5,21 @@ var students = [
 ];
 
 //document.writeln(students.length);
-document.write(students);
+document.write("<pre>");
+document.write(JSON.stringify(students, undefined, 2));
+document.write("</pre>");
 
 function loadData(){
 
     var i = 0;
     let dataList = document.getElementById("dataList");
-
+    
     while (i < students.length)
     {
         var listItem = document.createElement("li");
         
         console.log(students[i]);
-        listItem.innerText = students[i];
+        listItem.innerText = students[i].name;
 
         dataList.appendChild(listItem);
         i = i + 1; // Alternatively, use i++;
