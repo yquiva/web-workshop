@@ -1,7 +1,7 @@
 var students = [
-    {name: "John", score: 90 }, 
-    {name: "Larry", score: 60 }, 
-    {name: "Joseph", score: 50 }, 
+    {name: "John", score: 90 }, // 0 {Object} students[0].score => total  
+    {name: "Larry", score: 60 }, // 1
+    {name: "Joseph", score: 50 }, // 2
 ];
 
 //document.writeln(students.length);
@@ -16,6 +16,17 @@ students.forEach(student => {
 });
 
 document.writeln(names);
+
+document.write("<pre>");
+document.writeln("Average: " + calculateAverage());
+document.writeln(`Average: ${calculateAverage()}`);
+document.write("</pre>");
+
+function calculateAverage(){
+    var average = 0;
+
+    return average;
+}
 
 function loadData(){
 
@@ -37,3 +48,11 @@ function loadData(){
         // i += 3;
     }
 }
+
+function myReplacer(name, val) {
+    if (typeof val === 'string') {
+        return val.toString().toUpperCase();  
+     } else {
+        return val; // return as is
+    }
+};
