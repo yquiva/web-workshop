@@ -1,5 +1,5 @@
 var students = [
-    {name: "John", score: 90 }, // 0 {Object} students[0].score => total  
+    {name: "John", score: 90 }, // 0 {Object} => students[0] => students[0].score => total  
     {name: "Larry", score: 60 }, // 1
     {name: "Joseph", score: 50 }, // 2
 ];
@@ -23,7 +23,12 @@ document.writeln(`Average: ${calculateAverage()}`);
 document.write("</pre>");
 
 function calculateAverage(){
+
     var average = 0;
+    students.forEach(student => {
+        average = average + student.score;
+    });
+    average = average / students.length;
 
     return average;
 }
@@ -47,6 +52,16 @@ function loadData(){
         // i += 2;
         // i += 3;
     }
+}
+
+function displayAverage()
+{
+    var resultSection = document.getElementById("resultSection");
+    var paragraph = document.createElement("p");
+        
+    paragraph.innerText = "Average: " + calculateAverage();
+
+    resultSection.appendChild(paragraph);
 }
 
 function myReplacer(name, val) {
