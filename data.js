@@ -1,14 +1,15 @@
 var students = [
-    {name: "John", score: 90 }, // 0 {Object} => students[0] => students[0].score => total  
-    {name: "Larry", score: 60 }, // 1
-    {name: "Joseph", score: 50 }, // 2
+    {id: "1122222", name: "John", score: 90 }, // 0 {Object} => students[0] => students[0].score => total  
+    {id: "2223333", name: "Larry", score: 60 }, // 1
+    {id: "4455555", name: "Joseph", score: 50 }, // 2
+    {id: "5526666", name: "Karla", score: 80}
 ];
 
-//document.writeln(students.length);
-document.write("<pre>");
+document.write("<h3>JSON</h3>");
+document.write("<pre class='alert alert-secondary'>");
 document.write(JSON.stringify(students, undefined, 2));
 document.write("</pre>");
-
+document.write("<br/>");
 var names = [];
 
 students.forEach(student => {
@@ -33,6 +34,66 @@ function calculateAverage(){
     return average;
 }
 
+function loadDataGrid() {
+
+    var i = 0;
+    let dataList = document.getElementById("dataList");
+    
+    while (i < students.length)
+    {
+        var listItem = document.createElement("section");
+        listItem.classList.add("row");
+        listItem.classList.add("border");
+        
+        var id = document.createElement("div");
+        id.classList.add("col-sm");
+        id.innerText =  students[i].id;
+
+        var name = document.createElement("div");
+        name.classList.add("col-sm");
+        name.innerText =  students[i].name;
+
+        var score = document.createElement("div");
+        score.classList.add("col-sm");
+        score.innerText =  students[i].score;
+
+        console.log(students[i]);
+
+        dataList.appendChild(listItem);
+
+        listItem.appendChild(id);
+        listItem.appendChild(name);
+        listItem.appendChild(score);
+
+        i = i + 1; // Alternatively, use i++;
+
+        // Other ways:
+        // i += 2;
+        // i += 3;
+    }
+}
+
+function displayAverage()
+{
+    var resultSection = document.getElementById("resultSection");
+    var paragraph = document.createElement("p");
+    paragraph.classList.add("badge");
+    paragraph.classList.add("badge-info");
+
+    paragraph.innerText = "Average: " + calculateAverage();
+
+    resultSection.appendChild(paragraph);
+}
+
+function myReplacer(name, val) {
+    if (typeof val === 'string') {
+        return val.toString().toUpperCase();  
+     } else {
+        return val; // return as is
+    }
+};
+
+// Old-way of loading data (ol). No longer used
 function loadData(){
 
     var i = 0;
@@ -53,21 +114,3 @@ function loadData(){
         // i += 3;
     }
 }
-
-function displayAverage()
-{
-    var resultSection = document.getElementById("resultSection");
-    var paragraph = document.createElement("p");
-        
-    paragraph.innerText = "Average: " + calculateAverage();
-
-    resultSection.appendChild(paragraph);
-}
-
-function myReplacer(name, val) {
-    if (typeof val === 'string') {
-        return val.toString().toUpperCase();  
-     } else {
-        return val; // return as is
-    }
-};
