@@ -6,7 +6,7 @@ var students = [
 ];
 
 document.write("<h3>JSON</h3>");
-document.write("<pre class='alert alert-secondary'>");
+document.write("<pre class='alert alert-secondary'>"); // 1) Bootstrap class
 document.write(JSON.stringify(students, undefined, 2));
 document.write("</pre>");
 document.write("<br/>");
@@ -16,10 +16,9 @@ students.forEach(student => {
     names.push(student.name);
 });
 
-document.writeln(names);
+document.writeln("Students are:" + names);
 
 document.write("<pre>");
-document.writeln("Average: " + calculateAverage());
 document.writeln(`Average: ${calculateAverage()}`);
 document.write("</pre>");
 
@@ -43,7 +42,6 @@ function loadDataGrid() {
     {
         var listItem = document.createElement("section");
         listItem.classList.add("row");
-        listItem.classList.add("border");
         
         var id = document.createElement("div");
         id.classList.add("col-sm");
@@ -77,7 +75,7 @@ function displayAverage()
 {
     var resultSection = document.getElementById("resultSection");
     var paragraph = document.createElement("p");
-    paragraph.classList.add("badge");
+    paragraph.classList.add("badge"); // 2) Bootstrap classes
     paragraph.classList.add("badge-info");
 
     paragraph.innerText = "Average: " + calculateAverage();

@@ -13,30 +13,31 @@
     <header class="jumbotron">
         <h1>List of students</h1>
     </header>
-
-    <section id="dataList" class="border">
-        <div class="row">
-            <div class="col-md">
-                <b>Id</b>
-            </div>
-            <div class="col-md">
-                <b>Name</b>
-            </div>
-            <div class="col-md">
-                <b>Score</b>
-            </div>
-        </div>
-    </section>
-
-    <div>
-        <section>
+    
+    <section class="row-fluid">
+        <section class="btn-group">
             <button class="btn btn-primary" onclick="loadDataGrid()">Load</button>
             <button class="btn btn-secondary" onclick="displayAverage()">Average</button>
         </section>
-
-        <section id="resultSection" class="alert alert-info hidden">
-
+    </section>
+    <section class="row-fluid">
+        <section id="dataList" class="border">
+            <div class="row">
+                <div class="col-md">
+                    <b>Id</b>
+                </div>
+                <div class="col-md">
+                    <b>Name</b>
+                </div>
+                <div class="col-md">
+                    <b>Score</b>
+                </div>
+            </div>
         </section>
-    </div>
+    </section>
+    <section class="row-fluid">
+        <section id="resultSection" class="alert alert-info">
+        </section>
+    </section>
 </body>
 </html>
