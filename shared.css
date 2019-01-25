@@ -5,3 +5,8 @@ body {
 .highlight {
     background-color: yellow;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
